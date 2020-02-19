@@ -5,14 +5,12 @@ import java.util.Arrays;
 public class BubbleSort {
     public static void main(String[] args) {
 
-        int[] numbers = {234, 58, 3, 1, 16, 44, 32, 111};
-
-        int tmp = Integer.MIN_VALUE;
+        int[] numbers = {45, 328, 13, 1, 886, 4, 23, 753523521};
         int lengthUnsorted = numbers.length;
-        int currentMax = 0;
+        int tmp;
 
         for (int i = 0; i < lengthUnsorted; i++) {
-            for (int j = 1; j < lengthUnsorted; j++) {
+            for (int j = 1; j < lengthUnsorted && j >= 0; j++) {
                 if (numbers[j] < numbers[j - 1]) {
                     tmp = numbers[j - 1];
                     numbers[j - 1] = numbers[j];
@@ -22,4 +20,5 @@ public class BubbleSort {
         }
         System.out.println(Arrays.toString(numbers));
     }
+
 }
